@@ -8,7 +8,7 @@ import { motion, AnimatePresence, easeInOut } from "framer-motion";
 export default function Home() {
   const [cartTitle, setCartTitle] = useState("add to cart");
 
-  function handleClick() {
+ 
     function handleClick() {
       if (cartTitle === "add to cart") {
         setCartTitle("checkout");
@@ -17,7 +17,6 @@ export default function Home() {
       }
     }
     
-  }
 
   return (
     <div className="flex justify-center items-center h-screen">
