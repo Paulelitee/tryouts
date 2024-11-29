@@ -1,11 +1,8 @@
 "use client";
 
-import AddToCart from "./svgComponents/AddToCart";
-import Checkout from "./svgComponents/Checkout";
+
 import { useState } from "react";
-import { motion, AnimatePresence, easeInOut } from "framer-motion";
 import ProgressBar from "./svgComponents/components/ProgressBar";
-import ControlButton from "./svgComponents/components/ControlButton";
 
 export default function Home() {
   const [cartTitle, setCartTitle] = useState("add to cart");
