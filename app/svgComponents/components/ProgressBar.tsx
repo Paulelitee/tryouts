@@ -15,7 +15,8 @@ export default function ProgressBar() {
 
     function handlePrevious() {
         if(status > 1) {
-        setStatus(status - 1)
+            setNextTitle('next')
+            setStatus(status - 1)
         } else {setStatus(1)}
     }
 
