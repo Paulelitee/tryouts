@@ -1,0 +1,2 @@
+"# tryouts"  initgit add README.mdgit commit -m "first commit"git branch -M maingit remote add origin https://github.com/Paulelitee/tryouts.gitgit push -u origin main
+"# tryouts"  initgit add README.mdgit commit -m "first commit"git branch -M maingit remote add origin https://github.com/Paulelitee/tryouts.gitgit push -u origin main
