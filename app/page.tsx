@@ -9,7 +9,14 @@ export default function Home() {
   const [cartTitle, setCartTitle] = useState("add to cart");
 
   function handleClick() {
-    cartTitle === "add to cart" ? setCartTitle("checkout") : setCartTitle("add to cart");
+    function handleClick() {
+      if (cartTitle === "add to cart") {
+        setCartTitle("checkout");
+      } else {
+        setCartTitle("add to cart");
+      }
+    }
+    
   }
 
   return (
@@ -30,7 +37,7 @@ export default function Home() {
               className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
             >
               {cartTitle === "checkout" ? (
-                <Checkout fill="currentColor" stroke="black" width="20px" height="20px" />
+                <Checkout fill="currentColor" width="20px" height="20px" />
               ) : (
                 <AddToCart fill="transparent" stroke="currentColor" width="20px" height="20px" />
               )}

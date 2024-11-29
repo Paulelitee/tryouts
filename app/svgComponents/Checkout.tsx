@@ -3,10 +3,9 @@ type Props = {
     fill: string,
     height: string,
     width: string,
-    stroke: string
 }
 
-export default function Checkout({ fill, height, width, stroke}: Props) {
+export default function Checkout({ fill, height, width }: Props) {
 
     return <svg fill={fill} height={height} width={width} viewBox="0 0 236.764 236.764" version="1.1" id="Capa_1" >
 <g>
