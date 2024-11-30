@@ -6,7 +6,7 @@ const progressArray = [
     1, 2, 3, 4
 ]
 
-const active = 'bg-teal-300 w-6 h-6 rounded-full flex justify-center items-center text-teal-950 text-sm font-bold'
+const active = 'bg-teal-300 w-6 h-6 rounded-full flex justify-center items-center text-teal-950 text-sm font-bold transition delay-[1s]'
 const inActive =  'bg-zinc-300 w-6 h-6 rounded-full flex justify-center items-center text-teal-950 text-sm font-bold'
 export default function ProgressBar() {
 
