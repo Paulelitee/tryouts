@@ -37,5 +37,6 @@ button:active {
   z-index: -5;
   top: 12px;
   height: 2px;
+  transition: all 1s ease-out;
 }
 
