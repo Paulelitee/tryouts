@@ -1,7 +1,7 @@
 "use client";
 
 
-import ProgressBar from "./svgComponents/components/ProgressBar";
+import ProgressBar from "./components/ProgressBar";
 
 export default function Home() {
 
