@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import FormOne from "./FormOne"
 
 const progressArray = [
     1, 2, 3, 4
@@ -39,6 +40,8 @@ export default function ProgressBar() {
                     className={status >= progress ? active : inActive}
                     key={progress}>{progress}</div>)}
         </div>
+
+        <FormOne onNext={handleNext}/>
 
         <div className="flex justify-between">
             <button

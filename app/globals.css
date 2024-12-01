@@ -40,3 +40,8 @@ button:active {
   transition: all 1s ease-out;
 }
 
+.floating-label {
+  position: absolute;
+  padding:2px 8px;
+  left: 10px;
+}
