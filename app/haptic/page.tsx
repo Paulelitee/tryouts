@@ -75,7 +75,7 @@ export default function Haptic() {
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <motion.div
             whileTap={{
                 scale: 0.9,
-                borderColor: '#06b6d4'  
+                borderColor: '#fbbf24'  
             }}
             onClick={() => handleAddDigit(digit)}
             className={gridItemClass}
