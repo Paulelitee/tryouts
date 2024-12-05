@@ -14,7 +14,7 @@ export default function Haptic() {
 
     //function that listens to the click of numbers and adds them to the input pin
     const handleAddDigit = (payload: number | undefined) => {
-        if(value.length < 4) {
+        if(value.length < 6) {
             setValue(value.concat(payload!.toString()))
         } else return null
     }
@@ -101,7 +101,7 @@ export default function Haptic() {
             className={gridItemClass}>
            0
         </motion.div>
-        {value.length > 3 ? <div
+        {value.length > 5 ? <div
                 className={'rounded-full text-slate-950 flex justify-center items-center bg-yellow-400'}>
                     <ArrowSVG />
                 </div>
@@ -110,9 +110,8 @@ export default function Haptic() {
                 scale: 0.8,    
             }} 
             onClick={() => setShow(!show)}
-            className={gridItemClass}>
-
-            {(show ? 'Show' : 'Hide')}
+            className={`${gridItemClass}`}>
+            <p className="text-sm font-medium">{show ? 'Show' : 'Hide'}</p>
         </motion.div>
             }
     </div>
