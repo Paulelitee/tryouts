@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { motion } from 'framer-motion'
 
 export default function Haptic() {
 
@@ -57,13 +58,16 @@ export default function Haptic() {
     </div>
 
     <div className="number-container px-5">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <div
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <motion.div
+            whileTap={{
+                scale: 0.9
+            }}
             onClick={() => handleAddDigit(digit)}
             className={gridItemClass}
             key = {id}
             >
             {digit}
-        </div>)
+        </motion.div>)
         }
         <div 
             onClick={() => setShow(!show)}
