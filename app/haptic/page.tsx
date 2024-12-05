@@ -36,13 +36,13 @@ export default function Haptic() {
                     <div
                         key={id}
                         onChange={handleChange}
-                        className="bg-slate-800 w-12 h-12 rounded-lg">      
+                        className="bg-slate-900 w-12 h-12 rounded-lg">      
                     </div>
                     )
                 }
             <div className="absolute input-container gap-2">
                 {value.split('').map((digit, id) =>
-                <div  key = {id} className="h-12 w-12 flex justify-center items-center">
+                <div  key = {id} className="h-12 w-12 flex border border-sky-400 rounded-lg justify-center items-center">
                     {
                         show ? <div
                             className="w-2 h-2 bg-sky-300 rounded-full">
