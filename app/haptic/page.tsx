@@ -25,15 +25,15 @@ export default function Haptic() {
     }
 
 
-   return <div className="p-6 pl-16">
+   return <div className="p-6">
             <h1>Enter your password</h1>
-            <div className="flex justify-between pr-10">
+            <div className="flex justify-between">
                 {
                     [1, 2, 3, 4].map((number, id) =>
                     <div
                         key={id}
                         onChange={handleChange}
-                        className="bg-slate-800 w-10 h-10 p-6">      
+                        className="bg-slate-800 w-10 h-10 p-6 rounded-lg">      
                     </div>
                     )
                 }
@@ -57,7 +57,7 @@ export default function Haptic() {
     <div className="number-container w-full">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <div
             onClick={() => handleAddDigit(digit)}
-            className="bg-slate-800 flex justify-center items-center my-8 h-20 w-20"
+            className="bg-slate-800 rounded-lg flex justify-center items-center my-8 h-20 w-20"
             key = {id}
             >
             {digit}
