@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { AnimatePresence, easeInOut, motion } from 'framer-motion'
+import DeleteSVG from "../svgComponents/DeleteSVG"
 
 export default function Haptic() {
 
@@ -86,7 +87,7 @@ export default function Haptic() {
             onClick={handleDelete}
             className={gridItemClass}
         >
-            Delete
+            <DeleteSVG />
         </motion.div>
         <motion.div
             whileTap={{
