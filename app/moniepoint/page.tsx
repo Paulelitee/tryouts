@@ -31,7 +31,7 @@ export default function Haptic() {
     }
 
 
-   return <div className="bg-slate-950 p-8 min-h-screen flex flex-col items-center">
+   return <div className="bg-slate-950 p-4 min-h-screen flex flex-col items-center">
             <Image src = {'/assets/memoji.png'} width={80} height={80} alt="memoji"/>
                 <h1 className="text-3xl bg-gradient-to-r from-slate-100 via-slate-200 to-slate-500 bg-clip-text text-transparent">
                     Welcome back!
