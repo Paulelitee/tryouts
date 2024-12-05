@@ -30,8 +30,10 @@ export default function Haptic() {
 
 
    return <div className="px-8 py-12 flex flex-col items-center gap">
-            <h1 className="text-3xl text-center">Enter your password</h1>
-            <div className="gap-2 flex justify-start p-5">
+                <h1 className="text-3xl bg-gradient-to-r from-sky-100 via-sky-200 to-slate-800 bg-clip-text text-transparent">
+                    Enter secret code
+                </h1>          
+                <div className="gap-2 flex justify-start p-5">
                 {
                     [1, 2, 3, 4].map((number, id) =>
                     <div
@@ -99,7 +101,7 @@ export default function Haptic() {
         </motion.div>
         {value.length > 3 ? <div
                 className={'border border-zinc-700 rounded-lg flex justify-center items-center bg-sky-600'}>
-                    Login
+                    Verify
                 </div>
         : <motion.div
             whileTap={{
