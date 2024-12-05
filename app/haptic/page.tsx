@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from 'framer-motion'
+import { AnimatePresence, easeInOut, motion } from 'framer-motion'
 
 export default function Haptic() {
 
@@ -47,10 +47,19 @@ export default function Haptic() {
                     show ? <div
                         className="w-2 h-2 bg-slate-300 rounded-full">
                     </div> :
-                    <motion.div
-                        className="">
+                    <AnimatePresence>
+                    {!show && (
+                        <motion.div
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: 20, opacity: 0.5 }} // Adjusted exit animation for smoothness
+                            transition={{ ease: easeInOut, duration: 0.2 }} // Increased duration slightly for better visibility
+                            className=""
+                        >
                             {digit}
-                    </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
                 }
             </div>)}
         </div>
@@ -69,22 +78,6 @@ export default function Haptic() {
             {digit}
         </motion.div>)
         }
-        <motion.div
-            whileTap={{
-                scale: 0.9,    
-            }} 
-            onClick={() => setShow(!show)}
-            className={gridItemClass}>
-            {show ? 'show' : 'hide'}
-        </motion.div>
-        <motion.div
-            whileTap={{
-                scale: 0.9,    
-            }} 
-            onClick={() => handleAddDigit(0)}
-            className={gridItemClass}>
-           0
-        </motion.div>
         <motion.div 
              whileTap={{
                 scale: 0.9,    
@@ -94,8 +87,26 @@ export default function Haptic() {
         >
             Delete
         </motion.div>
+        <motion.div
+            whileTap={{
+                scale: 0.9,    
+            }} 
+            onClick={() => handleAddDigit(0)}
+            className={gridItemClass}>
+           0
+        </motion.div>
+        <motion.div
+            whileTap={{
+                scale: 0.9,    
+            }} 
+            onClick={() => setShow(!show)}
+            className={value.length < 4 ? gridItemClass : `${gridItemClass} bg-sky-500`}>
+
+            {value.length < 4 ? (show ? 'Show' : 'Hide') : 'Login'}
+        </motion.div>
+        
     </div>
 
-    <p className="text-amber-400">Forgot password?</p>
+    <p className="text-sky-400 font-light">Forgot password?</p>
    </div>
 }
