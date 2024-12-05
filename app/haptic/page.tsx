@@ -5,7 +5,7 @@ import { AnimatePresence, easeInOut, motion } from 'framer-motion'
 
 export default function Haptic() {
 
-    const gridItemClass = "bg-transparent focus:bg-zinc-900 border border-zinc-700 rounded-lg flex justify-center items-center"
+    const gridItemClass = "bg-transparent border border-zinc-700 rounded-lg flex justify-center items-center"
 
     const [ value, setValue ] = useState('')
     const [ show, setShow ] = useState(true)
@@ -70,7 +70,7 @@ export default function Haptic() {
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <motion.div
             whileTap={{
                 scale: 0.9,
-                borderColor: 'border-sky-500'  
+                borderColor: '#06b6d4'  
             }}
             onClick={() => handleAddDigit(digit)}
             className={gridItemClass}
