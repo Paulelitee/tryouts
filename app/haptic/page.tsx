@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { AnimatePresence, easeInOut, motion } from 'framer-motion'
 import DeleteSVG from "../svgComponents/DeleteSVG"
+import ArrowSVG from "../svgComponents/ArrowSVG"
 
 export default function Haptic() {
 
@@ -29,10 +30,11 @@ export default function Haptic() {
     }
 
 
-   return <div className="bg-slate-950 px-8 py-12 flex flex-col items-center gap">
-                <h1 className="text-3xl bg-gradient-to-r from-sky-100 via-sky-200 to-slate-800 bg-clip-text text-transparent">
-                    Enter secret code
-                </h1>          
+   return <div className="bg-slate-950 px-8 h-screen flex flex-col items-center gap">
+                <h1 className="text-3xl bg-gradient-to-r from-slate-100 via-slate-200 to-slate-500 bg-clip-text text-transparent">
+                    Welcome back!
+                </h1> 
+                <p className="font-normal text-xs opacity-80">Enter your 6 digit passcode</p>        
                 <div className="gap-2 flex justify-start p-5">
                 {
                     [1, 2, 3, 4, 5, 6].map((number, id) =>
@@ -101,7 +103,7 @@ export default function Haptic() {
         </motion.div>
         {value.length > 3 ? <div
                 className={'rounded-full text-slate-950 flex justify-center items-center bg-yellow-400'}>
-                    Verify
+                    <ArrowSVG />
                 </div>
         : <motion.div
             whileTap={{
