@@ -25,7 +25,7 @@ code {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0f172a;
     --foreground: #ededed;
   }
 }
@@ -72,12 +72,12 @@ label {
 
 .number-container {
   display: inline-grid;
-  grid-template-columns: 80px 80px 80px;
-  grid-template-rows: 80px 80px 80px 80px;
+  grid-template-columns: 75px 75px 75px;
+  grid-template-rows: 75px 75px 75px 75px;
   justify-content: center;
   width: 100%;
   gap: 10px;
-  height: 400px;
+  height: fit-content;
 }
 
 .input-container  {

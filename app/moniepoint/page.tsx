@@ -31,13 +31,13 @@ export default function Haptic() {
     }
 
 
-   return <div className="bg-slate-950 p-4 min-h-screen flex flex-col items-center">
-            <Image src = {'/assets/memoji.png'} width={80} height={80} alt="memoji"/>
+   return <div className="bg-slate-950 gap-2 p-4 min-h-screen flex flex-col items-center">
+            <Image src = {'/assets/memoji.png'} width={60} height={60} alt="memoji"/>
                 <h1 className="text-3xl bg-gradient-to-r from-slate-100 via-slate-200 to-slate-500 bg-clip-text text-transparent">
                     Welcome back!
                 </h1> 
                 <p className="font-normal text-xs opacity-80">Enter your 6 digit passcode</p>        
-                <div className="gap-2 flex justify-start p-5">
+                <div className="gap-2 flex justify-start p-3">
                 {
                     [1, 2, 3, 4, 5, 6].map((number, id) =>
                     <div
@@ -121,6 +121,6 @@ export default function Haptic() {
             }
     </div>
 
-    <p className="text-yellow-400 font-light">Forgot password?</p>
+    <p className="text-yellow-400 font-light bg-red-500">Forgot password?</p>
    </div>
 }
