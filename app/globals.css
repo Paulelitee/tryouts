@@ -57,17 +57,14 @@ label {
 .number-container {
   display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-rows: 80px 80px 80px 80px;
   justify-content: center;
   width: 100%;
   gap: 10px;
+  height: 400px;
 }
 
-.input-container  {
-  display: grid;
-  grid-template-columns: 30px 30px 30px 30px;
-  gap: 62px;
-}
+
 
 .input-container:nth-child(1) {
   grid-template-columns: 2;

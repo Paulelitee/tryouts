@@ -56,7 +56,7 @@ export default function Haptic() {
 
     </div>
 
-    <div className="number-container px-10 ">
+    <div className="number-container px-5">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <div
             onClick={() => handleAddDigit(digit)}
             className={gridItemClass}
