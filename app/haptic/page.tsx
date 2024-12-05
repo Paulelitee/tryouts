@@ -36,40 +36,41 @@ export default function Haptic() {
                     <div
                         key={id}
                         onChange={handleChange}
-                        className="bg-slate-800 w-10 h-10 p-6 rounded-lg">      
+                        className="bg-slate-800 w-12 h-12 rounded-lg">      
                     </div>
                     )
                 }
-        <div className="absolute input-container">
-            {value.split('').map((digit, id) =>
-            <div  key = {id} className="h-12 w-12 flex justify-center items-center rounded">
-                {
-                    show ? <div
-                        className="w-2 h-2 bg-slate-300 rounded-full">
-                    </div> :
-                    <AnimatePresence>
-                    {!show && (
-                        <motion.div
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: 20, opacity: 0.5 }} // Adjusted exit animation for smoothness
-                            transition={{ ease: easeInOut, duration: 0.2 }} // Increased duration slightly for better visibility
-                            className=""
-                        >
-                            {digit}
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-                }
-            </div>)}
-        </div>
+            <div className="absolute input-container gap-2">
+                {value.split('').map((digit, id) =>
+                <div  key = {id} className="h-12 w-12 flex justify-center items-center">
+                    {
+                        show ? <div
+                            className="w-2 h-2 bg-sky-300 rounded-full">
+                        </div> :
+                        <AnimatePresence>
+                        {!show && (
+                            <motion.div
+                                initial={{ y: 20, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                exit={{ y: 20, opacity: 0.5 }} // Adjusted exit animation for smoothness
+                                transition={{ ease: easeInOut, duration: 0.2 }} // Increased duration slightly for better visibility
+                                className=""
+                            >
+                                {digit}
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                    }
+                </div>)}
+            </div>
 
     </div>
 
     <div className="number-container px-5">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <motion.div
             whileTap={{
-                scale: 0.9,    
+                scale: 0.9,
+                borderColor: 'border-sky-500'  
             }}
             onClick={() => handleAddDigit(digit)}
             className={gridItemClass}

@@ -67,7 +67,6 @@ label {
 .input-container  {
   display: flex;
   grid-template-columns: 30px 30px 30px 30px;
-  gap: 10px;
   justify-content: start;
   
 }
