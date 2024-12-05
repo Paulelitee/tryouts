@@ -40,8 +40,23 @@ button:active {
   transition: all 1s ease-out;
 }
 
-.floating-label {
-  position: absolute;
-  padding:2px 8px;
-  left: 10px;
+label {
+  transition: all 5s ease-out;
+}
+
+.number-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input-container  {
+  display: grid;
+  grid-template-columns: 30px 30px 30px 30px;
+  gap: 62px;
+}
+
+.input-container:nth-child(1) {
+  grid-template-columns: 2;
 }
