@@ -23,7 +23,7 @@ export default function Haptic() {
     }
 
     const handleDelete = () => {
-        setValue(value.slice(1))
+        setValue(value.slice(0, -1))
         console.log(value)
     }
 
@@ -47,10 +47,10 @@ export default function Haptic() {
                     show ? <div
                         className="w-2 h-2 bg-slate-300 rounded-full">
                     </div> :
-                    <div
+                    <motion.div
                         className="">
                             {digit}
-                    </div>
+                    </motion.div>
                 }
             </div>)}
         </div>
@@ -96,6 +96,6 @@ export default function Haptic() {
         </motion.div>
     </div>
 
-    <p className="text-amber-400">Forgot password</p>
+    <p className="text-amber-400">Forgot password?</p>
    </div>
 }
