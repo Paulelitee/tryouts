@@ -4,10 +4,11 @@ import { useState } from "react"
 import { AnimatePresence, easeInOut, motion } from 'framer-motion'
 import DeleteSVG from "../svgComponents/DeleteSVG"
 import ArrowSVG from "../svgComponents/ArrowSVG"
+import Image from "next/image"
 
 export default function Haptic() {
 
-    const gridItemClass = "rounded-full bg-transparent font-bold border border-zinc-700 flex justify-center items-center"
+    const gridItemClass = "bg-slate-800 rounded-full bg-transparent font-bold border border-zinc-700 flex justify-center items-center"
 
     const [ value, setValue ] = useState('')
     const [ show, setShow ] = useState(true)
@@ -30,7 +31,8 @@ export default function Haptic() {
     }
 
 
-   return <div className="bg-slate-950 px-8 h-screen flex flex-col items-center gap">
+   return <div className="bg-slate-950 p-8 h-screen flex flex-col items-center gap">
+            <Image src = {'/assets/memoji.png'} width={80} height={80} alt="memoji"/>
                 <h1 className="text-3xl bg-gradient-to-r from-slate-100 via-slate-200 to-slate-500 bg-clip-text text-transparent">
                     Welcome back!
                 </h1> 
@@ -45,7 +47,7 @@ export default function Haptic() {
                     </div>
                     )
                 }
-            <div className="absolute input-container gap-2 border-yellow-500">
+            <div className="absolute input-container gap-2 border-yellow-400">
                 {value.split('').map((digit, id) =>
                 <div  key = {id} className="h-10 w-10 flex border border-yellow-400 rounded-lg justify-center items-center">
                     {
@@ -86,7 +88,8 @@ export default function Haptic() {
         }
         <motion.div 
              whileTap={{
-                scale: 0.8,    
+                scale: 0.8,
+                borderColor: '#fbbf24'     
             }}
             onClick={handleDelete}
             className={gridItemClass}
@@ -95,7 +98,8 @@ export default function Haptic() {
         </motion.div>
         <motion.div
             whileTap={{
-                scale: 0.8,    
+                scale: 0.8,
+                borderColor: '#fbbf24'     
             }} 
             onClick={() => handleAddDigit(0)}
             className={gridItemClass}>
@@ -107,7 +111,8 @@ export default function Haptic() {
                 </div>
         : <motion.div
             whileTap={{
-                scale: 0.8,    
+                scale: 0.8,  
+                borderColor: '#fbbf24'    
             }} 
             onClick={() => setShow(!show)}
             className={`${gridItemClass}`}>
