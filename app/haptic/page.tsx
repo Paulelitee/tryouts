@@ -4,6 +4,8 @@ import { useState } from "react"
 
 export default function Haptic() {
 
+    const gridItemClass = "bg-transparent focus:bg-zinc-900 border border-zinc-700 rounded-lg flex justify-center items-center"
+
     const [ value, setValue ] = useState('')
     const [ show, setShow ] = useState(true)
 
@@ -54,10 +56,10 @@ export default function Haptic() {
 
     </div>
 
-    <div className="number-container w-full">
+    <div className="number-container px-10 ">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <div
             onClick={() => handleAddDigit(digit)}
-            className="bg-transparent focus:bg-zinc-900 border border-zinc-700 rounded-lg flex justify-center items-center"
+            className={gridItemClass}
             key = {id}
             >
             {digit}
@@ -65,17 +67,18 @@ export default function Haptic() {
         }
         <div 
             onClick={() => setShow(!show)}
-            className="bg-slate-800 flex justify-center items-center my-8 h-20 w-20">
-            {show ? 'Hide' : 'show'}
+            className={gridItemClass}>
+            {show ? 'show' : 'hide'}
         </div>
         <div 
             onClick={() => handleAddDigit(0)}
-            className="bg-slate-800 flex justify-center items-center my-8 h-20 w-20">
+            className={gridItemClass}>
            0
         </div>
         <div 
             onClick={handleDelete}
-            className="bg-slate-800 flex justify-center items-center my-8 h-20 w-20">
+            className={gridItemClass}
+        >
             Delete
         </div>
     </div>

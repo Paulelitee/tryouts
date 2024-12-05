@@ -40,16 +40,27 @@ button:active {
   transition: all 1s ease-out;
 }
 
+html {
+  display: flex;
+  justify-content: center
+}
+
+body {
+  max-width: 750px;
+  width: 100%;
+}
+
 label {
   transition: all 5s ease-out;
 }
 
 .number-container {
   display: inline-grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 80px 80px 80px 80px;
-  justify-content: space-between;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px 100px;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
 }
 
 .input-container  {
