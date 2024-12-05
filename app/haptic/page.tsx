@@ -96,16 +96,20 @@ export default function Haptic() {
             className={gridItemClass}>
            0
         </motion.div>
-        <motion.div
+        {value.length > 3 ? <div
+                className={gridItemClass + ' bg-sky-600'}>
+                    Login
+                </div>
+        : <motion.div
             whileTap={{
                 scale: 0.9,    
             }} 
             onClick={() => setShow(!show)}
-            className={value.length < 4 ? gridItemClass : `${gridItemClass} bg-sky-600`}>
+            className={gridItemClass}>
 
-            {value.length < 4 ? (show ? 'Show' : 'Hide') : 'Login'}
+            {(show ? 'Show' : 'Hide')}
         </motion.div>
-        
+            }
     </div>
 
     <p className="text-sky-400 font-light">Forgot password?</p>
