@@ -121,6 +121,6 @@ export default function Haptic() {
             }
     </div>
 
-    <p className="text-yellow-400 font-light bg-red-500">Forgot password?</p>
+    <p className="p-2 text-yellow-400 font-light">Forgot password?</p>
    </div>
 }
