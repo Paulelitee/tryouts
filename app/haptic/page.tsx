@@ -101,7 +101,7 @@ export default function Haptic() {
                 scale: 0.9,    
             }} 
             onClick={() => setShow(!show)}
-            className={value.length < 4 ? gridItemClass : `${gridItemClass} bg-sky-500`}>
+            className={value.length < 4 ? gridItemClass : `${gridItemClass} bg-sky-600`}>
 
             {value.length < 4 ? (show ? 'Show' : 'Hide') : 'Login'}
         </motion.div>
