@@ -55,7 +55,7 @@ export default function Haptic() {
                                 animate={{ y: 0, opacity: 1 }}
                                 exit={{ y: 20, opacity: 0.5 }} // Adjusted exit animation for smoothness
                                 transition={{ ease: easeInOut, duration: 0.2 }} // Increased duration slightly for better visibility
-                                className="text-sky-400"
+                                className="text-sky-400 font-bold"
                             >
                                 {digit}
                             </motion.div>
@@ -82,7 +82,7 @@ export default function Haptic() {
         }
         <motion.div 
              whileTap={{
-                scale: 0.9,    
+                scale: 0.8,    
             }}
             onClick={handleDelete}
             className={gridItemClass}
@@ -91,7 +91,7 @@ export default function Haptic() {
         </motion.div>
         <motion.div
             whileTap={{
-                scale: 0.9,    
+                scale: 0.8,    
             }} 
             onClick={() => handleAddDigit(0)}
             className={gridItemClass}>
@@ -103,7 +103,7 @@ export default function Haptic() {
                 </div>
         : <motion.div
             whileTap={{
-                scale: 0.9,    
+                scale: 0.8,    
             }} 
             onClick={() => setShow(!show)}
             className={gridItemClass}>
