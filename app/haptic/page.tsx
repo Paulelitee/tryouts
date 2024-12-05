@@ -43,12 +43,12 @@ export default function Haptic() {
                     </div>
                     )
                 }
-            <div className="absolute input-container gap-2">
+            <div className="absolute input-container gap-2 border-yellow-500">
                 {value.split('').map((digit, id) =>
-                <div  key = {id} className="h-10 w-10 flex border border-sky-400 rounded-lg justify-center items-center">
+                <div  key = {id} className="h-10 w-10 flex border border-yellow-400 rounded-lg justify-center items-center">
                     {
                         show ? <div
-                            className="w-2 h-2 bg-sky-300 rounded-full">
+                            className="w-2 h-2 bg-slate-200 rounded-full">
                         </div> :
                         <AnimatePresence>
                         {!show && (
@@ -57,7 +57,7 @@ export default function Haptic() {
                                 animate={{ y: 0, opacity: 1 }}
                                 exit={{ y: 20, opacity: 0.5 }} // Adjusted exit animation for smoothness
                                 transition={{ ease: easeInOut, duration: 0.2 }} // Increased duration slightly for better visibility
-                                className="text-sky-400 font-bold"
+                                className="text-slate-300 font-bold"
                             >
                                 {digit}
                             </motion.div>
@@ -100,7 +100,7 @@ export default function Haptic() {
            0
         </motion.div>
         {value.length > 3 ? <div
-                className={'border border-zinc-700 rounded-lg flex justify-center items-center bg-sky-600'}>
+                className={'rounded-full text-slate-950 flex justify-center items-center bg-yellow-400'}>
                     Verify
                 </div>
         : <motion.div
@@ -115,6 +115,6 @@ export default function Haptic() {
             }
     </div>
 
-    <p className="text-sky-400 font-light">Forgot password?</p>
+    <p className="text-yellow-400 font-light">Forgot password?</p>
    </div>
 }
