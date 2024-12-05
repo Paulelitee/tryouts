@@ -98,7 +98,7 @@ export default function Haptic() {
            0
         </motion.div>
         {value.length > 3 ? <div
-                className={gridItemClass + ' bg-sky-600'}>
+                className={'border border-zinc-700 rounded-lg flex justify-center items-center bg-sky-600'}>
                     Login
                 </div>
         : <motion.div
