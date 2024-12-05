@@ -28,7 +28,7 @@ export default function Haptic() {
     }
 
 
-   return <div className="px-8 py-12 flex flex-col items-center gap-4">
+   return <div className="px-8 py-12 flex flex-col items-center gap-2">
             <h1 className="text-3xl text-center">Enter your password</h1>
             <div className="gap-2 flex justify-start p-5">
                 {
@@ -60,7 +60,7 @@ export default function Haptic() {
     <div className="number-container px-5">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <motion.div
             whileTap={{
-                scale: 0.9
+                scale: 0.9,    
             }}
             onClick={() => handleAddDigit(digit)}
             className={gridItemClass}
@@ -69,22 +69,33 @@ export default function Haptic() {
             {digit}
         </motion.div>)
         }
-        <div 
+        <motion.div
+            whileTap={{
+                scale: 0.9,    
+            }} 
             onClick={() => setShow(!show)}
             className={gridItemClass}>
             {show ? 'show' : 'hide'}
-        </div>
-        <div 
+        </motion.div>
+        <motion.div
+            whileTap={{
+                scale: 0.9,    
+            }} 
             onClick={() => handleAddDigit(0)}
             className={gridItemClass}>
            0
-        </div>
-        <div 
+        </motion.div>
+        <motion.div 
+             whileTap={{
+                scale: 0.9,    
+            }}
             onClick={handleDelete}
             className={gridItemClass}
         >
             Delete
-        </div>
+        </motion.div>
     </div>
+
+    <p className="text-amber-400">Forgot password</p>
    </div>
 }
