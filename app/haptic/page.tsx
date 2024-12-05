@@ -55,7 +55,7 @@ export default function Haptic() {
                                 animate={{ y: 0, opacity: 1 }}
                                 exit={{ y: 20, opacity: 0.5 }} // Adjusted exit animation for smoothness
                                 transition={{ ease: easeInOut, duration: 0.2 }} // Increased duration slightly for better visibility
-                                className=""
+                                className="text-sky-400"
                             >
                                 {digit}
                             </motion.div>
