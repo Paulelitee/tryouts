@@ -25,8 +25,8 @@ export default function Haptic() {
     }
 
 
-   return <div className="p-6">
-            <h1>Enter your password</h1>
+   return <div className="px-8 py-12 flex flex-col gap-8">
+            <h1 className="text-3xl text-center">Enter your password</h1>
             <div className="flex justify-between">
                 {
                     [1, 2, 3, 4].map((number, id) =>
