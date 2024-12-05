@@ -45,8 +45,8 @@ label {
 }
 
 .number-container {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
   justify-content: space-between;
   width: 100%;
 }

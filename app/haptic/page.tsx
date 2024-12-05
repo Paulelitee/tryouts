@@ -57,7 +57,7 @@ export default function Haptic() {
     <div className="number-container w-full">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((digit, id) => <div
             onClick={() => handleAddDigit(digit)}
-            className="bg-slate-800 rounded-lg flex justify-center items-center my-8 h-20 w-20"
+            className="bg-transparent hover:bg-zinc-900 border border-zinc-700 rounded-lg flex justify-center items-center my-8 h-20 w-20"
             key = {id}
             >
             {digit}
