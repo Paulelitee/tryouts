@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Sora } from "next/font/google";
 
+// Initialize the Google Font
+const sora = Sora({
+  subsets: ["latin"], // Define the subset for better performance
+  variable: "--font-sora", // Optional: Create a custom CSS variable
+  weight: ["400", "700"], // Include the font weights you need
+});
+
+// Initialize Local Fonts
 const Switzer = localFont({
   src: "./fonts/Switzer-Variable.woff",
-  variable: "--font-geist-sans", // this creates a custom CSS variable
-  weight: "100 900", // specify the font weights if needed
+  variable: "--font-geist-sans", // Create a CSS variable for Switzer
+  weight: "100 900", // Define the font weights for Switzer
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  variable: "--font-geist-mono", // Create a CSS variable for Geist Mono
+  weight: "100 900", // Define the font weights for Geist Mono
 });
 
 export const metadata: Metadata = {
@@ -26,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${Switzer.variable} ${geistMono.variable} antialiased`} // Applying the font variables
+        className={`${sora.variable} ${Switzer.variable} ${geistMono.variable} antialiased`} // Applying all font variables
       >
         {children}
       </body>

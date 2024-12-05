@@ -6,7 +6,7 @@ import DeleteSVG from "../svgComponents/DeleteSVG"
 
 export default function Haptic() {
 
-    const gridItemClass = "bg-transparent border border-zinc-700 rounded-lg flex justify-center items-center"
+    const gridItemClass = "rounded-full bg-transparent font-bold border border-zinc-700 flex justify-center items-center"
 
     const [ value, setValue ] = useState('')
     const [ show, setShow ] = useState(true)
@@ -29,23 +29,23 @@ export default function Haptic() {
     }
 
 
-   return <div className="px-8 py-12 flex flex-col items-center gap">
+   return <div className="bg-slate-950 px-8 py-12 flex flex-col items-center gap">
                 <h1 className="text-3xl bg-gradient-to-r from-sky-100 via-sky-200 to-slate-800 bg-clip-text text-transparent">
                     Enter secret code
                 </h1>          
                 <div className="gap-2 flex justify-start p-5">
                 {
-                    [1, 2, 3, 4].map((number, id) =>
+                    [1, 2, 3, 4, 5, 6].map((number, id) =>
                     <div
                         key={id}
                         onChange={handleChange}
-                        className="bg-slate-900 w-12 h-12 rounded-lg">      
+                        className="bg-slate-900 w-10 h-10 rounded-lg">      
                     </div>
                     )
                 }
             <div className="absolute input-container gap-2">
                 {value.split('').map((digit, id) =>
-                <div  key = {id} className="h-12 w-12 flex border border-sky-400 rounded-lg justify-center items-center">
+                <div  key = {id} className="h-10 w-10 flex border border-sky-400 rounded-lg justify-center items-center">
                     {
                         show ? <div
                             className="w-2 h-2 bg-sky-300 rounded-full">
